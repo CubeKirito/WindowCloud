@@ -1,3 +1,12 @@
 @import url('//cdn.cubesoft.asia/webfont/Nanum.php');
 
-body { font-family: "NanumGothic", sans-serif; }
+body { font-family: "NanumGothic", sans-serif; background-color: #E0FFFC; margin: 0; text-align: center; }
+
+#panel { width: 400px; height: 300px; margin: 0 auto; left: -75px; background-color: white; padding-top: 70px; border-bottom-left-radius: 10%; border-bottom-right-radius: 10%; }
+@media only screen and (max-width: 500px) { #panel { width: 100%; } body { background-color: white; } }
+
+#login_button { width: 100px; height: 30px; line-height: 30px; border-radius: 10px; margin: 10px auto; border: solid #C0C0C0 1px; cursor: pointer; }
+#login_button:hover { background-color: #F7F7F7; }
+#login_button:active { background-color: #E4E4E4; }
+
+input { font-family: "NanumGothic", sans-serif; border: 0; border-bottom: solid #C0C0C0 1px; width: 200px; height: 30px; font-size: 105%; text-align: center; }
