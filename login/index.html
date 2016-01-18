@@ -6,9 +6,19 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <script type="text/javascript" src="js/default.js"></script>
   <title>WindowCloud :: CubeSoft Devs</title>
  </head>
  <body>
-  
+  <div id="panel">
+	<img src="img/logo.png" alt="WindowCloud">
+	<div id="forms">
+		<div><input type="text" id="id" placeholder="ID" onKeypress="if(event.keyCode==13) document.getElementById('password').focus();"></div>
+		<div><input type="password" id="password" placeholder="PASSWORD" onKeypress="if(event.keyCode==13) login();"></div>
+		<div id="login_button" onClick="login();">Login</div>
+	</div>
+  </div>
  </body>
 </html>
