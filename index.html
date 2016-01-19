@@ -1,0 +1,23 @@
+<?php
+	session_start();
+
+	if(isset($_SESSION['logined'])) {
+		header('Location: cloud/');
+	} else {
+		header('Location: login/');
+	}
+?>
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Redirecting...</title>
+ </head>
+ <body>
+  <h1>Please wait..</h1>
+ </body>
+</html>
