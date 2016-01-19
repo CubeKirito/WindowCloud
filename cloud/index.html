@@ -1,3 +1,8 @@
+<?php
+	session_start();
+
+	if(!isset($_SESSION['logined'])) { header('Location: ../'); exit('Please login first.'); }
+?>
 <!doctype html>
 <html lang="en">
  <head>
@@ -7,8 +12,10 @@
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <title>WindowCloud</title>
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <script type="text/javascript" src="js/default.js"></script>
  </head>
  <body>
-  
+  <div id="load"></div>
  </body>
 </html>
