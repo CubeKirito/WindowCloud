@@ -10,8 +10,28 @@
 	foreach($k as $admins) {
 		$data = explode('|', $admins);
 		
-		if($data['id'] == $id && $data['pw'] == $pw) {
-			
+		if($data[0] == $id && $data[1] == $pw) {
+			$_SESSION['logined'] = true;
+
+			$_SESSION['id'] = $id;
+			$_SESSION['type'] = "admin";
 		}
 	}
+
+	
+	$guests = explode('\r\n', $guestData);
+
+	foreach($k as $guests) {
+		$data = explode('|', $guests);
+
+		if($data[0] == $id && $data[1] == $pw) {
+			$_SESSION['logined'] = true;
+
+			$_SESSION['id'] = $id;
+			$_SESSION['type'] = "guest";
+		}
+	}
+	
+	if($_SESSION['logined') $result['RESULT'] = "LOGIN_FAILED";
+	else $result['RESULT'] = "LOGIN_SUCCESS";
 ?>
