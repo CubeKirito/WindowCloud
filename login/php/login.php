@@ -1,9 +1,10 @@
 <?php
 	$adminData = file_get_contents('../../db/Admins.db');
 	$guestData = file_get_contents('../../db/Guests.db');
-
-	$id = $_POST['id']l
-	$pw = $_POST['pw'];
+	
+	if(!isset($_POST['id']) || !isset($_POST['pw'])) { $result['RESULT'] = "LOGIN_FAILED"; exit(json_encode($result)); }
+	$id = $_POST['id'];
+	$pw = sha1($_POST['pw']);
 
 	$admins = explode('\r\n', $adminData);
 
@@ -32,6 +33,7 @@
 		}
 	}
 	
-	if($_SESSION['logined') $result['RESULT'] = "LOGIN_FAILED";
+	if($_SESSION['logined']) $result['RESULT'] = "LOGIN_FAILED";
 	else $result['RESULT'] = "LOGIN_SUCCESS";
+	exit(json_encode($result));
 ?>
